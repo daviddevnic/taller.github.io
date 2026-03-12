@@ -402,9 +402,8 @@ footer {
     #inicio {
         min-height: 70vh;
         padding: 3rem 20px;
-        background-attachment: scroll; /* Desactiva el efecto parallax en móviles */
-        background-size: 100% auto; /* Ajusta el tamaño para que el ancho sea completo y el alto automático */
-        background-repeat: no-repeat; /* Evita que la imagen se repita si no cubre todo el alto */
+        background-attachment: scroll; /* Desactiva el efecto parallax para mejor rendimiento en móviles */
+        background-size: cover;        /* Asegura que la imagen cubra todo el banner, centrada, sin espacios vacíos */
     }
 }
 
