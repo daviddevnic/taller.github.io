@@ -112,9 +112,14 @@ section {
     background-position: center;
     background-attachment: fixed; /* Opcional: crea un efecto parallax */
     color: var(--color-blanco);
-    text-align: center;
-    padding: 6rem 0;
+    padding: 4rem 20px; /* Ajuste de padding */
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh; /* Asegura que el banner ocupe la mayor parte de la pantalla */
+    text-align: center; /* Mantiene el centrado del texto dentro del contenedor flex */
 }
 
 #servicios {
@@ -171,23 +176,32 @@ h2::after {
     margin-top: 2rem;
 }
 
+/* Enlace para envolver cada tarjeta de servicio */
+.servicio-enlace {
+    text-decoration: none;
+    color: inherit;
+    display: block; /* Asegura que el enlace ocupe todo el espacio del article */
+}
+
 #servicios article {
     background: var(--color-fondo);
     padding: 2rem;
     border-radius: var(--borde-radio);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
     text-align: left;
-    border-top: 5px solid var(--color-primario);
+    position: relative;
+    overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#servicios article:hover {
+#servicios .servicio-enlace:hover article {
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
 }
 
 #servicios article h3 {
     color: var(--color-primario);
+    margin-bottom: 0.5rem;
 }
 
 /* Sección Nosotros */
@@ -199,15 +213,21 @@ h2::after {
 }
 
 /* Sección Contacto */
-.contacto-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 3rem;
+.contacto-simple {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
     margin-top: 2rem;
     background: var(--color-blanco);
-    padding: 2rem;
+    padding: 3rem 2rem;
     border-radius: var(--borde-radio);
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.contacto-simple p {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    color: #555;
 }
 
 #contacto h3 {
@@ -226,6 +246,73 @@ h2::after {
 }
 #contacto a:hover {
     text-decoration: underline;
+}
+
+/* Botones de Acción y Redes Sociales */
+.acciones-contacto {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.btn-icono {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    max-width: none;
+    padding: 18px 25px;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.btn-icono:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+/* Estilo Minimalista y Profesional para Botones de Contacto */
+#contacto .btn-icono {
+    background: transparent;
+    border: 2px solid;
+    font-weight: bold;
+    /* El color del borde y texto se define en las clases específicas */
+}
+
+#contacto .btn-whatsapp {
+    border-color: #25D366;
+    color: #25D366;
+}
+
+#contacto .btn-whatsapp:hover {
+    background-color: #25D366;
+    color: var(--color-blanco);
+}
+
+#contacto .btn-facebook {
+    border-color: #1877F2;
+    color: #1877F2;
+}
+
+#contacto .btn-facebook:hover {
+    background-color: #1877F2;
+    color: var(--color-blanco);
+}
+
+#contacto .btn-instagram {
+    border-color: #d6249f; /* Un color representativo de Instagram */
+    color: #d6249f;
+    background: transparent; /* Asegura que no haya gradiente */
+}
+
+/* El hover para Instagram y otros ya está cubierto por la transición general y el :hover específico */
+#contacto .btn-instagram:hover {
+    background-color: #d6249f;
+    color: var(--color-blanco);
 }
 
 /* Formulario */
@@ -275,16 +362,25 @@ footer {
 }
 
 /* 7. Media Queries para Responsividad */
+@media(max-width: 992px) {
+}
+
 @media(max-width: 768px) {
     h1 { font-size: 2.5rem; }
     h2 { font-size: 2rem; }
 
     header {
-        padding: 0.5rem 0;
+        padding: 1rem 0;
+        position: static; /* Header deja de ser pegajoso en móvil para evitar problemas de layout */
+    }
+
+    html {
+        scroll-padding-top: 0; /* Se resetea porque el header ya no es fijo */
     }
 
     header nav {
         flex-direction: column;
+        align-items: center; /* Centra el logo y la navegación */
         gap: 1rem;
     }
 
@@ -292,15 +388,49 @@ footer {
         padding: 0;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 0.5rem;
+        gap: 0.5rem 1rem; /* Espacio vertical y horizontal */
     }
 
     header ul li {
         padding: 0 10px;
     }
 
-    .contacto-wrapper {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+    section {
+        padding: 3rem 0;
+    }
+
+    #inicio {
+        min-height: 70vh;
+        padding: 3rem 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        line-height: 1.5;
+    }
+
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.75rem; }
+
+    .btn-cta {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    #inicio p {
+        font-size: 1rem;
+    }
+
+    .servicios-grid {
+        grid-template-columns: 1fr; /* Una sola columna en móviles pequeños */
+    }
+
+    #servicios article {
+        padding: 1.5rem;
+    }
+
+    .contacto-simple {
+        padding: 1.5rem;
     }
 }
