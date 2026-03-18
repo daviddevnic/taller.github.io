@@ -1,202 +1,135 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mecánico a Domicilio | Xavier Robleto - Taller Móvil Premium</title>
-    
-    <meta name="description" content="Servicios mecánicos premium a domicilio en Managua con Xavier Robleto. No pagues grúa, diagnóstico profesional hasta tu casa u oficina.">
-    <meta name="keywords" content="mecánico a domicilio managua, taller xavier robleto, mecanica automotriz, diagnostico vehicular, sin grúa">
-    <meta name="author" content="Xavier Robleto">
+    <head>
 
-    <meta property="og:title" content="Taller Mecánico Xavier Robleto | Servicio a Domicilio">
-    <meta property="og:description" content="Olvídate de la grúa. Llevamos el taller a la puerta de tu casa.">
-    <meta property="og:image" content="https://iili.io/qGYdtyl.png">
-    <meta property="og:type" content="website">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Xavier Robleto | Mecánico a Domicilio Premium</title>
+        <link rel="stylesheet" href="styles.css">
 
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    </head>
+    <body>
 
-<div class="main-wrapper">
-
-    <header>
-        <div class="nav-container">
-            <a href="#inicio" class="logo">Mecánica Xavier Robleto</a>
+        <header>
             <nav>
+                <a href="#inicio"><strong>Xavier Robleto</strong></a>
                 <ul>
                     <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#beneficios">Beneficios</a></li>
-                    <li><a href="#citas">Citas</a></li>
+                    <li><a href="#nosotros">Sobre Mí</a></li>
                     <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="blog.html">Blog</a></li>
                 </ul>
             </nav>
-        </div>
-    </header>
+        </header>
 
-    <main>
-        <section id="inicio" class="hero">
-            <div class="container">
-                <h1 class="section-title">Xavier Robleto</h1>
-                <p class="section-subtitle">Mecánico a Domicilio con Servicio Premium. <strong>¡No pagues grúa!</strong> Yo doy el diagnóstico hasta donde lo necesites, en tu casa o trabajo.</p>
+        <main>
+            <section id="inicio">
+                <div class="container">
+                    <h1>Mecánica Premium a Domicilio</h1>
+                    <p>Tu tiempo es valioso. Olvídate de llevar el auto al taller; yo llevo el taller a tu casa u oficina. Servicio profesional, honesto y sin traslados.</p>
+                    <a href="#contacto" class="btn-cta">Agendar visita a domicilio</a>
+                </div>
+            </section>
 
-                <div class="hero-cards-container">
-                    <div class="hero-card" onclick="openLightbox(this)">
-                        <img src="https://iili.io/qGYdtyl.png" alt="Diagnóstico vehicular a domicilio">
-                    </div>
-                    <div class="hero-card" onclick="openLightbox(this)">
-                        <img src="https://iili.io/qGYdZv4.png" alt="Mecánico Xavier Robleto trabajando">
-                    </div>
-                    <div class="hero-card" onclick="openLightbox(this)">
-                        <img src="https://iili.io/qGYdL3G.png" alt="Herramientas de diagnóstico profesional">
+            <section id="publicidad">
+                <div class="container">
+                    <h2>Promociones y Novedades</h2>
+                    <div class="carousel">
+                        <button class="carousel-btn prev" aria-label="Anterior">&#10094;</button>
+                        <div class="carousel-track-container">
+                            <ul class="carousel-track">
+                                <!-- Agrega aquí tus imágenes anchas (ej: 1200x400px) -->
+                                <li class="carousel-slide current-slide"><img src="imagenes/mantenimiento-de-ac.png" alt="Promoción Diagnóstico Gratis"></li>
+                                <li class="carousel-slide"><img src="imagenes/revision-pre-viaje.png" alt="Descuento en Afinación"></li>
+                                <li class="carousel-slide"><img src="imagenes/cambio-de-aceite.png" alt="Servicio de Frenos a Domicilio"></li>
+                            </ul>
+                        </div>
+                        <button class="carousel-btn next" aria-label="Siguiente">&#10095;</button>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="servicios" class="booking-section section-white">
-            <div class="container">
-                <h2 class="section-title">Nuestros Servicios</h2>
-                <div class="booking-grid">
-                    <article class="booking-card service-card service-diagnostic">
-                        <div class="icon">💻</div>
-                        <h3>Diagnóstico Computarizado</h3>
-                        <p>Escáner automotriz completo para detectar fallas exactas sin mover tu auto.</p>
-                        <a href="https://wa.me/50577101883?text=Hola,%20necesito%20un%20diagnóstico%20a%20domicilio" class="btn btn-service">Solicitar Revisión</a>
-                    </article>
-                    <article class="booking-card service-card service-mechanic">
-                        <div class="icon">🔧</div>
-                        <h3>Mecánica General</h3>
-                        <p>Reparación de motor, frenos, suspensión y sistemas eléctricos in-situ.</p>
-                        <a href="https://wa.me/50577101883?text=Hola,%20tengo%20un%20problema%20mecánico" class="btn btn-service">Cotizar Reparación</a>
-                    </article>
-                    <article class="booking-card service-card service-maintenance">
-                        <div class="icon">🛢️</div>
-                        <h3>Mantenimiento Preventivo</h3>
-                        <p>Cambio de aceite, filtros y chequeo general para evitar averías futuras.</p>
-                        <a href="https://wa.me/50577101883?text=Hola,%20necesito%20mantenimiento%20preventivo" class="btn btn-service">Agendar Mantenimiento</a>
-                    </article>
+            <section id="servicios">
+                <div class="container">
+                    <h2>Servicios a tu Puerta</h2>
+                    <div class="servicios-grid">
+                        <a href="https://wa.me/777?text=Hola%20Xavier,%20necesito%20un%20Cambio%20de%20Aceite" class="servicio-enlace">
+                            <article>
+                                <h3>Cambio de Aceite</h3>
+                                <p>Prolonga la vida de tu motor sin salir de casa. Utilizo aceites y filtros de grado premium, garantizando un servicio limpio y rápido en tu propio garage.</p>
+                            </article>
+                        </a>
+                        
+                        <a href="https://wa.me/777?text=Hola%20Xavier,%20tengo%20problemas%20con%20el%20motor" class="servicio-enlace">
+                            <article>
+                                <h3>Reparación de Motores</h3>
+                                <p>Recupera la potencia de tu vehículo. Diagnostico y reparo desde fugas hasta ajustes complejos, asegurando que el corazón de tu auto funcione perfectamente.</p>
+                            </article>
+                        </a>
+            
+                        <a href="https://wa.me/777?text=Hola%20Xavier,%20necesito%20reemplazo%20de%20piezas" class="servicio-enlace">
+                            <article>
+                                <h3>Reemplazo de Piezas</h3>
+                                <p>¿Frenos desgastados o suspensión ruidosa? Instalo refacciones garantizadas con precisión profesional, para que tu auto quede seguro y listo para rodar.</p>
+                            </article>
+                        </a>
+            
+                        <a href="https://wa.me/777?text=Hola%20Xavier,%20necesito%20servicio%20de%20Aire%20Acondicionado" class="servicio-enlace">
+                            <article>
+                                <h3>Aire Acondicionado</h3>
+                                <p>Viaja fresco y cómodo. Realizo recargas de gas, detección de fugas y mantenimiento del sistema de climatización directamente donde estés.</p>
+                            </article>
+                        </a>
+            
+                        <a href="https://wa.me/777?text=Hola%20Xavier,%20tengo%20una%20falla%20electrónica" class="servicio-enlace">
+                            <article>
+                                <h3>Mecánica Electrónica</h3>
+                                <p>No adivines, soluciona. Uso escáneres avanzados para descifrar testigos del tablero y fallas de sensores que otros mecánicos no encuentran.</p>
+                            </article>
+                        </a>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="beneficios" class="booking-section">
-            <div class="container">
-                <h2 class="section-title">¿Por qué elegirme?</h2>
-                <p class="section-subtitle">Tu tiempo y tu comodidad son mi prioridad. Servicio profesional donde estés.</p>
-                <div class="facilities-grid">
-                    <div class="facility-card">
-                        <img src="https://iili.io/qGYo1Pp.png" alt="Ahorro en Grúa" onclick="openLightbox(this)">
-                        <div class="facility-content">
-                            <h3>¡Cero Grúas!</h3>
-                            <p>No gastes dinero extra moviendo un auto averiado. Yo voy donde está el problema.</p>
+            <section id="nosotros">
+                <div class="container">
+                    <h2>Sobre Xavier Robleto</h2>
+                    <p>Soy Xavier Robleto, mecánico profesional certificado. Entiendo que tu rutina es exigente, por eso transformé la experiencia tradicional del taller en un <strong>servicio premium a domicilio</strong>. Con mi unidad móvil equipada, ofrezco la misma calidad técnica que un taller de agencia, pero con la comodidad y transparencia de hacerlo frente a ti, en tu hogar u oficina.</p>
+                </div>
+            </section>
+
+            <section id="contacto">
+                <div class="container">
+                    <h2>Agenda tu Visita</h2>
+                    <div class="contacto-simple">
+                        <p>Recupera tu tiempo libre. Envíame tu ubicación y el problema de tu auto:</p>
+                        
+                        <div class="acciones-contacto">
+                            <a href="https://wa.me/777?text=Hola%20Xavier,%20quisiera%20agendar%20un%20servicio%20a%20domicilio" class="btn-cta btn-whatsapp btn-icono">
+                                Agendar por WhatsApp
+                            </a>
+                            <a href="https://wa.me/777" class="btn-cta btn-whatsapp btn-icono">
+                                Llamar ahora
+                            </a>
+                            <a href="https://facebook.com" target="_blank" class="btn-cta btn-facebook btn-icono">
+                                Ver trabajos en Facebook
+                            </a>
+                            <a href="https://instagram.com" target="_blank" class="btn-cta btn-instagram btn-icono">
+                                Sígueme en Instagram
+                            </a>
                         </div>
                     </div>
-                    <div class="facility-card">
-                        <img src="https://iili.io/qGYoVSt.png" alt="Servicio en Casa" onclick="openLightbox(this)">
-                        <div class="facility-content">
-                            <h3>Comodidad Total</h3>
-                            <p>Atención en la puerta de tu casa o en el parqueo de tu oficina mientras trabajas.</p>
-                        </div>
-                    </div>
-                    <div class="facility-card">
-                        <img src="https://iili.io/qGYngwJ.png" alt="Herramientas Profesionales" onclick="openLightbox(this)">
-                        <div class="facility-content">
-                            <h3>Taller Móvil Equipado</h3>
-                            <p>Cuento con las herramientas y escáneres necesarios para un diagnóstico preciso.</p>
-                        </div>
-                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </main>
 
-        <section id="equipo" class="booking-section section-white">
+        <footer>
             <div class="container">
-                <h2 class="section-title">Tu Mecánico de Confianza</h2>
-                <div class="booking-grid" style="justify-content: center;">
-                    <article class="team-card">
-                        <img src="https://iili.io/qGYolov.png" alt="Dr. David Devnic" class="team-img" onclick="openLightbox(this)">
-                        <h3>Xavier Robleto</h3>
-                        <span class="team-role">Mecánico Automotriz Certificado</span>
-                        <p style="font-size: 0.9rem; color: var(--text-light); margin-top: 10px;">
-                            Experto en diagnóstico y reparación a domicilio. Mi misión es ofrecerte honestidad, rapidez y calidad sin que tengas que salir de casa.
-                        </p>
-                    </article>
-                </div>
+                <p>&copy; 2024 Xavier Robleto | Mecánica Premium a Domicilio.</p>
             </div>
-        </section>
+        </footer>
 
-       <section id="citas" class="booking-section">
-    <div class="container">
-        <h2 class="section-title">Agenda tu Visita</h2>
-        <div class="booking-grid">
-            <div class="booking-card">
-                <h3>Google Calendar</h3>
-                <p>Reserva el horario que mejor te convenga para la revisión.</p>
-                
-                <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0DumiQAsdyV3UtHzdNyXOCJqdJ_8XKD9hJG-_ci91jele-aJIpNsDx4ilWLRvrQ7PtVLj5Z5Wt?gv=true" target="_blank" class="btn btn-google">Programar una cita</a>
-                </div>
-
-            <div class="booking-card">
-                <h3>WhatsApp</h3>
-                <p>¿Urgencia mecánica? Escríbeme directamente para asistencia rápida.</p>
-                <a href="https://wa.me/50577433084?text=Hola,%20tengo%20una%20emergencia%20mecánica" target="_blank" class="btn btn-whatsapp">Contactar ahora</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-        <section class="booking-section section-white">
-            <div class="container">
-                <h2 class="section-title">Cobertura</h2>
-                <div class="location-container">
-                    <div class="booking-card">
-                        <div class="icon">📍</div>
-                        <h3>Managua y Alrededores</h3>
-                        <p>Servicio móvil a toda la capital.</p>
-                        <a href="https://maps.google.com" target="_blank" class="btn btn-google">Ver Zona</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>© 2026 Servicios Mecánicos Xavier Robleto.</p>
-        </div>
-    </footer>
-
-    <div id="lightbox" class="lightbox-overlay" aria-hidden="true">
-        <span class="lightbox-close" onclick="closeLightbox()">×</span>
-        <img id="lightbox-image" class="lightbox-content" src="" alt="Imagen ampliada">
-    </div>
-
-</div>
-
-<script>
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImage = document.getElementById('lightbox-image');
-
-    function openLightbox(element) {
-        event.stopPropagation(); 
-        const img = element.tagName === 'IMG' ? element : element.querySelector('img');
-        if (img) {
-            lightboxImage.src = img.src;
-            lightboxImage.alt = img.alt;
-            lightbox.style.display = 'flex';
-        }
-    }
-
-    function closeLightbox() {
-        lightbox.style.display = 'none';
-        lightboxImage.src = '';
-    }
-
-    lightbox.addEventListener('click', closeLightbox);
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
-</script>
-
-</body>
+        <script src="script.js"></script>
+    </body>
 </html>

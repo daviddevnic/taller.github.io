@@ -352,6 +352,71 @@ form button.btn-cta:hover {
     background-color: var(--color-primario);
 }
 
+/* Carrusel de Publicidad */
+#publicidad {
+    padding-bottom: 2rem;
+    background-color: var(--color-blanco);
+}
+
+.carousel {
+    position: relative;
+    height: 400px; /* Altura fija para mantener uniformidad */
+    width: 100%;
+    margin: 0 auto;
+    border-radius: var(--borde-radio);
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.carousel-track-container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-track {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    height: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    height: 100%;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra el área sin deformarse */
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(33, 33, 33, 0.6);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 1rem;
+    z-index: 10;
+    font-size: 1.5rem;
+    transition: background 0.3s;
+}
+
+.carousel-btn:hover {
+    background: var(--color-primario);
+}
+
+.carousel-btn.prev { left: 0; border-top-right-radius: 8px; border-bottom-right-radius: 8px; }
+.carousel-btn.next { right: 0; border-top-left-radius: 8px; border-bottom-left-radius: 8px; }
+
 /* 6. Footer */
 footer {
     background: var(--color-secundario);
@@ -404,6 +469,10 @@ footer {
         padding: 3rem 20px;
         background-attachment: scroll; /* Desactiva el efecto parallax para mejor rendimiento en móviles */
         background-size: cover;        /* Asegura que la imagen cubra todo el banner, centrada, sin espacios vacíos */
+    }
+
+    .carousel {
+        height: 250px; /* Altura más pequeña para móviles */
     }
 }
 
